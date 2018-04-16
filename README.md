@@ -1,2 +1,2 @@
 # Online Judge Solutions
-My solutions for online judge tasks that are appearing on my programming classes
+My solutions for online judge tasks that come up on my programming classes
