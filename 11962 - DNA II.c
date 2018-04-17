@@ -5,18 +5,18 @@
 int main()
 {
     char napis[30];
-    int test_cases,cyfra,pierwszy_znak;
-    unsigned long long int suma,waga=1;
+    int test_cases,curr_case,cyfra;
+    unsigned long long suma,waga;
+    int i;
     scanf("%d\n",&test_cases);
-
-    while(test_cases--)
+    curr_case = 1;
+    while(curr_case <= test_cases)
     {
         suma = 0;
+        waga = 1;
         fgets(napis, 30, stdin);
-        pierwszy_znak = strlen(napis);
-        int i;
 
-        for(i=pierwszy_znak;i>=0;--i)
+        for(i=strlen(napis)-1;i>=0;--i)
         {
             if(napis[i] == 'A') cyfra = 0;
             else if(napis[i] == 'C') cyfra = 1;
@@ -31,8 +31,8 @@ int main()
                 waga = waga*4;
             }
         }
-        printf("Case %d: (%d:%lld)\n",test_cases,strlen(napis),suma);
-
+        printf("Case %d: (%d:%llu)\n",curr_case,strlen(napis)-1,suma);
+        curr_case++;
     }
 
     return 0;
