@@ -4,7 +4,7 @@
 
 int main()
 {
-    char napis[30];
+    char napis[50];
     int test_cases,curr_case,cyfra;
     unsigned long long suma,waga;
     int i;
@@ -14,7 +14,7 @@ int main()
     {
         suma = 0;
         waga = 1;
-        fgets(napis, 30, stdin);
+        fgets(napis, 50, stdin);
 
         for(i=strlen(napis)-1;i>=0;--i)
         {
