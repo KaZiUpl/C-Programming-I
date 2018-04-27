@@ -1,2 +1,2 @@
-# Online Judge Solutions
-My solutions for online judge tasks that come up on my programming classes
+# C Programming I
+My solutions for tasks that come up on my C programming classes
