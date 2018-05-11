@@ -23,14 +23,13 @@ int main(void)
             {
                 liczba_jedynek++;
                 liczba_bin[znacznik] = '1';
-                znacznik--;
             }
-
+            if(maska >=0) znacznik--;
             maska = maska<<1;
         }
 
         printf("The parity of ");
-        for(i=znacznik+1;i<32;++i)
+        for(i=znacznik+1+(maska<0?1:0);i<32;++i)
         {
             printf("%c",liczba_bin[i]);
         }
