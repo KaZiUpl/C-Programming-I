@@ -2,7 +2,7 @@
 #include<math.h>
 #include<pthread.h>
 
-#define maksymalna pow(10,2)
+#define maksymalna pow(10,7)
 #define ilosc_watkow 8
 int licznik;
 

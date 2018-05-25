@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-#define maksymalna pow(10,3)
+#define maksymalna pow(10,7)
 int licznik;
 
 int czy_pierwsza()
