@@ -1,0 +1,48 @@
+[kacper@Kacper-Fedora fazy komp]$ diff fazy_bez.i fazy_z.i
+4d3
+< # 31 "<command-line>"
+6c5
+< # 32 "<command-line>" 2
+---
+> # 1 "<command-line>" 2
+872c871,879
+< # 18 "fazy.c"
+---
+> 
+> 
+>     int j=1,i=1;
+>     for(i ; i<4 ; ++i)
+>     {
+>         j *= i;
+>     }
+>     printf("%d",j);
+> 
+
+
+[kacper@Kacper-Fedora fazy komp]$ diff fazy_bez.s fazy_z.s
+11a12,13
+> .LC4:
+> 	.string	"%d"
+22a25
+> 	subq	$16, %rsp
+30a34,47
+> 	movl	$1, -4(%rbp)
+> 	movl	$1, -8(%rbp)
+> 	jmp	.L2
+> .L3:
+> 	movl	-4(%rbp), %eax
+> 	imull	-8(%rbp), %eax
+> 	movl	%eax, -4(%rbp)
+> 	addl	$1, -8(%rbp)
+> .L2:
+> 	cmpl	$3, -8(%rbp)
+> 	jle	.L3
+> 	movl	-4(%rbp), %eax
+> 	movl	%eax, %esi
+> 	movl	$.LC4, %edi
+32c49,51
+< 	popq	%rbp
+---
+> 	call	printf
+> 	movl	$0, %eax
+> 	leave
