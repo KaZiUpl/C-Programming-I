@@ -1,7 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<ctype.h>
-#include<string.h>
 #include<math.h>
 
 #define FOR(i,a,b) for(i=a;i<b;++i)
